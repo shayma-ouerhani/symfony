@@ -1,0 +1,14 @@
+<table border="2">
+<tr>
+<td>id</td>
+<td>title</td>
+</tr>
+{%for i in showroom %}
+<tr>
+<td>{{i.id}}</td>
+<td>{{i.title}}</td>
+<td><a href="{{path('editShowRoom',{'id':i.id})}}">edit</a></td>
+<td><a href="{{path('deleteShowRoom',{'id':i.id})}}">delete</a></td>
+</tr>
+{% endfor %}
+</table>
